@@ -17,4 +17,4 @@ curl --request GET \
 function getPlaylist(playlist, artist) {
     const playlistArray = playlists.filter(playlist => playlist.startsWith(artist));
     return playlistArray;
-}
+} 
