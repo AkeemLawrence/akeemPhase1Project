@@ -23,3 +23,5 @@ function getRadio(radio, artist) {
     const radioArray = radio.filter(radio => radio.pop() === artist.pop());
     return radioArray;
 } 
+
+//Include playlist sort?
