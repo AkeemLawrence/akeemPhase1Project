@@ -7,4 +7,4 @@ curl --request GET \
 
   document.getElementById("Title").addEventListener("click", displayDate);
   document.getElementById("link"). element.addEventListener("mouseover", myFunction);
-  //document.getElementById("Title").element.addEventListener("mouseout", myThirdFunction);
+  document.getElementById("body").element.addEventListener("mouseout", myThirdFunction);
