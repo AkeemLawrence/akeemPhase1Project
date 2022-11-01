@@ -18,3 +18,8 @@ function getPlaylist(playlist, artist) {
     const playlistArray = playlists.filter(playlist => playlist.startsWith(artist));
     return playlistArray;
 } 
+
+function getRadio(radio, artist) {
+    const radioArray = drivers.filter(driver => driver.toLowerCase() === string.toLowerCase());
+    return newArray;
+}
