@@ -20,6 +20,6 @@ function getPlaylist(playlist, artist) {
 } 
 
 function getRadio(radio, artist) {
-    const radioArray = drivers.filter(driver => driver.toLowerCase() === string.toLowerCase());
-    return newArray;
+    const radioArray = radio.filter(radio => radio.pop() === artist.pop());
+    return radioArray;
 }
