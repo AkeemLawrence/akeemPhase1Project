@@ -13,3 +13,8 @@ curl --request GET \
     const spotifyArray = songs.filter(songs => song.name === string);
     return spotifyArray;
 }
+
+function getPlaylist(playlist, artist) {
+    const playlistArray = playlists.filter(playlist => playlist.startsWith(artist));
+    return playlistArray;
+}
