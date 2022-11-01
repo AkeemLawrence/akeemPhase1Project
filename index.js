@@ -6,3 +6,5 @@ curl --request GET \
   --header 'Content-Type: application/json'
 
   document.getElementById("Title").addEventListener("click", displayDate);
+  document.getElementById("link"). element.addEventListener("mouseover", myFunction);
+  //document.getElementById("Title").element.addEventListener("mouseout", myThirdFunction);
