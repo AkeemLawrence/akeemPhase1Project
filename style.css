@@ -1,13 +1,7 @@
-body {
-    background-color: blue;
-  }
-  
-  h1 {
-    color: black;
-    text-align: center;
-  }
-  
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-  }
+h1{
+  color: green
+}
+#getGenres{
+  border: 2px solid green;
+  border-radius: 10px;
+}

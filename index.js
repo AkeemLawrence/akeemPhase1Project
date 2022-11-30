@@ -1,5 +1,45 @@
-GET https://api.spotify.com/v1/playlists/{playlist_id}/tracks
-GET https://api.spotify.com/v1/tracks/{id}
+let rawData;
+const getDataButton = document.getElementById('getDataButton');
+const contentGoesHere = document.getElementById('contentGoesHere');
+const contentButton = document.getElementById('getNames');
+const getGenresButton = document.getElementById('getGenres');
+
+const cb =  (event) => {
+    console.log(event)
+};
+
+const getData = () => {
+    fetch("https://api.tvmaze.com/search/shows?q=a")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+            rawData = data;
+            contentGoesHere.innerHTML = rawData;
+        })
+}
+
+const getNamesCb = () => {
+    const names = rawData.map((item) => {
+        return item.show.name;
+    })
+    contentGoesHere.innerHTML = names;
+}
+
+const getGenresCb = () => {
+    const genres = rawData.map((item) => {
+        return item.show.genres;
+    })
+    contentGoesHere.innerHTML = genres;
+}
+
+getDataButton.addEventListener('click', getData);
+contentButton.addEventListener('mouseover', getNamesCb);
+getGenresButton.addEventListener('dblclick', getGenresCb);
+
+/*GET /https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+GET /https://api.spotify.com/v1/tracks/{id}
 curl --request GET \
   --url https://api.spotify.com/v1/audio-features \
   --header 'Authorization: ' \
@@ -25,3 +65,4 @@ function getRadio(radio, artist) {
 } 
 
 //Include playlist sort?
+*/
